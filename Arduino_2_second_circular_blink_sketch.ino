@@ -17,7 +17,8 @@ void setup() //Default pin settings is low impedance OUTPUT mode.
 
 void setLED(int pinPair) //Defines all the functions that turn on each individual LED. This is done by setting pins as INPUT effectively removing them
 //from the circuit due to the high impedance state that an INPUT assignemnt creates
-//and then defining the pin pair that will illuminate the desired diode and the polarity of HIGH/LOW for that pair
+//and then defining the pin pair that will illuminate the desired diode and the polarity of HIGH/LOW for that pair. PLEASE NOTE: Diodes are numbered on the top side (the side with the speaker, MCU, etc.) 
+//meaning that value of pinPair is NOT the value of the Diode indicated on the PCB schematic (ex. pinPair 1 turns on Diode 12
 {
   if(pinPair == 1) //Turns on Diode 12
   {
